@@ -47,7 +47,7 @@ flowchart LR
     ROT --> M
     M --> OUT[("results/*.json<br/>figures/*.png")]
   end
-  OUT --> NB["Notebook"] & WEB["Website"] & PL["PLAN.md"]
+  OUT --> NB["Notebook"] & WEB["Website"]
   NI["Non-identifiability demo<br/>(src/nonident.py)"] --> OUT
 ```
 
