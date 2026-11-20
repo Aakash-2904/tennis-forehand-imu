@@ -8,7 +8,8 @@ It does not measure accuracy on real players.
 
 | deliverable | file |
 |---|---|
-| two-page technical plan | [`PLAN.md`](PLAN.md) |
+| **report (two pages, submitted)** | [`report.pdf`](report.pdf) |
+| two-page technical plan (markdown) | [`PLAN.md`](PLAN.md) |
 | executed notebook | [`notebooks/forehand_experiment.ipynb`](notebooks/forehand_experiment.ipynb) |
 | plain-English walkthrough notebook (loads `data/`) | [`notebooks/forehand_walkthrough.ipynb`](notebooks/forehand_walkthrough.ipynb) |
 | dataset: data dictionary + a one-session sample (full set regenerates with `export_dataset.py`) | [`data/`](data/README.md) |

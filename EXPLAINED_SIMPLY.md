@@ -52,7 +52,7 @@ They said they value **"knowing the physical limits"** as much as fancy models. 
 ---
 
 ## Where everything is
-- `PLAN.md`: the two-page technical plan (the formal answer to `q.md`)
+- `PLAN.md`: the two-page technical plan (the formal answer to the task brief)
 - `notebooks/forehand_experiment.ipynb`: the notebook with all results
 - `site/index.html`: the explainer website (open it in a browser)
 - `README.md`: how to re-run everything
