@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+site/story3d/backup_technical/
+site/story3d_v2/removed/
+# full dataset stays local; regenerate with: py -3.11 export_dataset.py
+data/raw_imu.csv.gz
+data/labels.csv.gz
+data/frame_features.csv.gz

@@ -1,0 +1,14 @@
+15:16:43 dataset ready: 24 sessions, 282467 frames
+15:17:20 player  0: F1 LR 98.7 HGB 98.4 HGB+HMM 98.3 | edit HGB 100.0 HGB+HMM 100.0 | rot RMSE hgb 5.2 oracle 4.6 cal5 3.3
+15:17:54 player  1: F1 LR 97.4 HGB 98.1 HGB+HMM 97.7 | edit HGB 92.6 HGB+HMM 100.0 | rot RMSE hgb 6.3 oracle 7.0 cal5 5.2
+15:18:28 player  2: F1 LR 98.2 HGB 98.0 HGB+HMM 97.3 | edit HGB 91.5 HGB+HMM 100.0 | rot RMSE hgb 7.6 oracle 6.8 cal5 5.2
+15:19:05 player  3: F1 LR 98.2 HGB 98.6 HGB+HMM 98.6 | edit HGB 93.8 HGB+HMM 100.0 | rot RMSE hgb 5.4 oracle 5.3 cal5 4.5
+15:19:44 player  4: F1 LR 98.3 HGB 98.5 HGB+HMM 98.2 | edit HGB 100.0 HGB+HMM 100.0 | rot RMSE hgb 4.7 oracle 4.2 cal5 5.4
+15:20:23 player  5: F1 LR 98.4 HGB 98.4 HGB+HMM 98.0 | edit HGB 93.8 HGB+HMM 100.0 | rot RMSE hgb 8.8 oracle 9.0 cal5 4.9
+15:20:58 player  6: F1 LR 97.4 HGB 94.9 HGB+HMM 96.6 | edit HGB 72.9 HGB+HMM 100.0 | rot RMSE hgb 12.4 oracle 10.3 cal5 7.5
+15:21:34 player  7: F1 LR 98.8 HGB 99.1 HGB+HMM 99.0 | edit HGB 98.7 HGB+HMM 100.0 | rot RMSE hgb 5.2 oracle 3.7 cal5 4.3
+15:22:09 player  8: F1 LR 98.8 HGB 99.4 HGB+HMM 99.2 | edit HGB 98.7 HGB+HMM 100.0 | rot RMSE hgb 8.9 oracle 8.4 cal5 5.5
+15:22:56 player  9: F1 LR 98.3 HGB 98.4 HGB+HMM 98.4 | edit HGB 100.0 HGB+HMM 100.0 | rot RMSE hgb 6.1 oracle 7.2 cal5 6.2
+15:23:33 player 10: F1 LR 98.5 HGB 99.2 HGB+HMM 98.9 | edit HGB 99.3 HGB+HMM 100.0 | rot RMSE hgb 8.4 oracle 7.6 cal5 5.4
+15:24:11 player 11: F1 LR 99.2 HGB 99.5 HGB+HMM 99.4 | edit HGB 98.7 HGB+HMM 100.0 | rot RMSE hgb 5.9 oracle 5.2 cal5 6.3
+15:24:14 done

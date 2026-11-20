@@ -1,0 +1,75 @@
+<title>Forehand 3D, Simple</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: instrument console. Chapter rail on top, 3D stage left, narration card right; stacks on phones. */
+:root{
+  --bg:#eaf0ec; --panel:#f6f9f7; --fg:#10201a; --muted:#56685f; --line:#c6d3cc;
+  --court:#2d6a55; --ground:#3a7a62; --body:#d6dcdf; --racket:#1b2730; --accent:#d9b51f; --stage:#dfe8e3;
+  --ph0:#8a9a94; --ph1:#2f7dbf; --ph2:#d9502b; --ph3:#d9b51f; --ph4:#4fae7a;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1411; --panel:#111d19; --fg:#e2ebe6; --muted:#8ea198; --line:#22342d;
+  --court:#1d4a3c; --ground:#1f4c3e; --body:#bfc8cc; --racket:#0a0f12; --accent:#e6c53a; --stage:#0f1b17;
+  --ph0:#7d8d87; --ph1:#4f9ad6; --ph2:#ee6a45; --ph3:#e6c53a; --ph4:#62c48d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1411; --panel:#111d19; --fg:#e2ebe6; --muted:#8ea198; --line:#22342d;
+  --court:#1d4a3c; --ground:#1f4c3e; --body:#bfc8cc; --racket:#0a0f12; --accent:#e6c53a; --stage:#0f1b17;
+  --ph0:#7d8d87; --ph1:#4f9ad6; --ph2:#ee6a45; --ph3:#e6c53a; --ph4:#62c48d; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--f-body);padding-block:18px 28px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1280px;margin:0 auto;display:grid;gap:14px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+h1{font:800 clamp(22px,3.2vw,34px)/1.05 var(--f-display);letter-spacing:-.01em;margin:0;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;margin:0}
+.rail{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.rail button{flex:0 0 auto;font:500 12px/1 var(--f-mono);letter-spacing:.02em;padding:9px 11px;border-radius:999px;
+  border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;white-space:nowrap}
+.rail .plan{flex:0 0 auto;align-self:center;font:700 12px var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--fg);padding:0 4px 0 10px;border-left:3px solid var(--accent);margin-left:6px;white-space:nowrap}
+.rail .plan:first-child{margin-left:0}
+.rail button[aria-current="true"]{background:var(--court);border-color:var(--court);color:#fff}
+.rail button:focus-visible,.tp button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:stretch}
+@media (max-width:900px){.main{grid-template-columns:minmax(0,1fr)}}
+.stagebox{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--stage);
+  height:clamp(380px,68vh,640px)}
+#stage{position:absolute;inset:0}
+.tp{position:absolute;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;gap:8px;padding:0 12px;
+  background:linear-gradient(transparent,color-mix(in srgb,var(--stage) 92%,transparent) 40%);z-index:5}
+.tp button{font:500 13px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--fg);
+  border-radius:8px;padding:7px 11px;cursor:pointer}
+.tp .grow{flex:1;height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.tp .grow i{display:block;height:100%;width:0;background:var(--accent)}
+.tp .lbl{font:12px var(--f-mono);color:var(--muted);white-space:nowrap}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.kick{font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--court)}
+:root:not([data-theme="light"]) .kick{color:var(--accent)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .kick{color:var(--court)}}
+:root[data-theme="light"] .kick{color:var(--court)}
+.card h2{font:700 22px/1.15 var(--f-display);margin:0;text-wrap:balance}
+.card .body{font-size:14.5px;overflow:auto}
+.card .body p{margin:0 0 .7em}
+.card .body table{border-collapse:collapse;font:12px var(--f-mono);font-variant-numeric:tabular-nums;width:100%}
+.card .body td,.card .body th{border-bottom:1px solid var(--line);padding:3px 4px;text-align:left}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;font:11px var(--f-mono);color:var(--muted);margin-top:auto;padding-top:8px;border-top:1px solid var(--line)}
+.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.err{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font:13px var(--f-mono);padding:24px;text-align:center}
+footer{color:var(--muted);font-size:12.5px}
+</style>
+<div class="wrap">
+<header><h1>What can a racket sensor see?</h1>
+<p class="sub">A step-by-step look at one tennis forehand, seen only through a small sensor in the racket handle.</p></header>
+<nav class="rail" id="rail" aria-label="Chapters"></nav>
+<div class="main">
+  <div class="stagebox"><div id="stage"></div>
+    <div class="tp"><button id="prev" aria-label="Previous chapter">◀</button><button id="play">Pause</button><button id="next" aria-label="Next chapter">▶</button>
+      <div class="grow" aria-hidden="true"><i id="prog"></i></div><span class="lbl" id="auto">auto-advance on</span></div>
+  </div>
+  <article class="card" aria-live="polite"><div class="kick" id="kick"></div><h2 id="title"></h2><div class="body" id="body"></div>
+    <div class="legend"><span style="--c:var(--ph0)">idle</span><span style="--c:var(--ph1)">backswing</span><span style="--c:var(--ph2)">forward swing</span><span style="--c:var(--ph3)">follow-through</span><span style="--c:var(--ph4)">recovery</span></div></article>
+</div>
+<footer>All players here are simulated, so the scores are a best case. Use the arrows or the step buttons to move through the story.</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
